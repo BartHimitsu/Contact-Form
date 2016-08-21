@@ -16,7 +16,7 @@ function done() {
 if ( isset($_POST) ) {
 
   // Adresat
-  $do         = 'idolwszutrab7@gmail.com'; // Adres e-Mail na który ma zostać wysłany formularz
+  $do         = 'XXX'; // Adres e-Mail na który ma zostać wysłany formularz
 
   // Dane formularza
   $imie       = $_POST['name_field'];
@@ -35,7 +35,7 @@ if ( isset($_POST) ) {
   $headers = implode("\r\n", $headers);
 
   // ReCaptcha NoCaptcha
-  $secret = "6LfnGigTAAAAAKpFgE0kSzkMlBHzqi9EuF-6yjub";
+  $secret = "XXX";
   if (!$captcha) {
     died('<li>Proszę wypełnić formularz reCAPTCHA.</li>');
     exit;
