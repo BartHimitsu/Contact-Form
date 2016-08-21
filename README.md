@@ -19,4 +19,5 @@ Możliwości formularza to:
 * Na stronie z błędem jest specjalny link, który cofa do formularza nie usuwając zawartości w polach.
 
 W miarach możliwości będę dalej rozwijać ten formularz.
+
 Niestety moja znajomość PHP jest zerowa, tak więc raczej na tym pozostanie.
