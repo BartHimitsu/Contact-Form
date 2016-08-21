@@ -6,6 +6,8 @@ Jest to mój śliczny formularz kontaktowy napisany w HTML5, CSS3 i PHP.
 
 Możliwości formularza to:
 * Łatwe dostosowywanie - można włączyć lub wyłączyć niepotrzebne pola.
+* Pola ładnie się podświetlają po najechaniu myszką.
+* Formularz posiada ładny, ledwo widoczny cień.
 * Sprawna i działająca reCAPTCHA noCAPTCHA.
 * Formularz nie pozwala na dziwne znaki w polu Imię lub Nick (ale zezwala na polskie znaki).
 * Formularz sprawdza poprawność adresu e-Mail.
