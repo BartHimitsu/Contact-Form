@@ -11,7 +11,7 @@
 <style>
 body, html {margin:0;padding:0;}
 #contact_form {
-  width: 600px;;
+  width: 500px;;
   padding: 50px;
   margin: 25px auto;
   background: white;
@@ -25,7 +25,7 @@ body, html {margin:0;padding:0;}
   position: relative;
   width: 100%;
   margin: 5px;
-} #contact_form div.field input, #contact_form div.field textarea {
+} #contact_form div.field input, #contact_form div.field select, #contact_form div.field textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
@@ -36,8 +36,8 @@ body, html {margin:0;padding:0;}
   background: white;
   font-family: Arial;
   color: black;
-} #contact_form div.field input:hover, #contact_form div.field input:focus,
-#contact_form div.field textarea:hover, #contact_form div.field textarea:focus {
+} #contact_form div.field input:hover, #contact_form div.field select:hover, #contact_form div.field input:focus,
+#contact_form div.field textarea:hover, #contact_form div.field select:hover, #contact_form div.field textarea:focus {
   border: 1px solid rgba(0,0,0,0.4);
 } #contact_form div.field #submit_button {
   width: auto;
@@ -50,6 +50,7 @@ body, html {margin:0;padding:0;}
   color: rgba(0,0,0,0.5);
   cursor: text;
 } #contact_form div.field input:hover + .icon, #contact_form div.field input:focus + .icon,
+#contact_form div.field select:hover + .icon, #contact_form div.field select:focus + .icon,
 #contact_form div.field textarea:hover + .icon, #contact_form div.field textarea:focus + .icon {
   color: rgba(0,0,0,0.7);
 }
@@ -71,22 +72,41 @@ body, html {margin:0;padding:0;}
     </div>
   </div>
   <div class="flex">
-    <div class="field" style="display: none;">
+<!--
+    <div class="field">
       <input name="phone_field" id="phone_field" placeholder="Twój numer telefonu">
       <label class="icon" for="phone_field">
         <i class="fa fa-phone fa-fw" aria-hidden="true"></i>
       </label>
     </div>
-    <div class="field"  style="display: none;">
+-->
+<!--
+    <div class="field">
       <input name="company_field" id="company_field" placeholder="Firma">
       <label class="icon" for="company_field">
         <i class="fa fa-briefcase fa-fw" aria-hidden="true"></i>
       </label>
     </div>
+-->
   </div>
+<!--
   <div class="flex">
     <div class="field">
-      <input name="subject_field" id="subject_field" placeholder="Temat">
+      <input name="subject_field" id="subject_field" placeholder="Temat" value="This is hard setup value." readonly>
+      <label class="icon" for="subject_field">
+        <i class="fa fa-star fa-fw" aria-hidden="true"></i>
+      </label>
+    </div>
+  </div>
+-->
+  <div class="flex">
+    <div class="field">
+      <select name="subject_field" id="subject_field" placeholder="Temat">
+        <option value="" disabled selected>Temat</option>
+        <option value="Kontakt w sprawie serwera TeamSpeak">Kontakt w sprawie serwera TeamSpeak</option>
+        <option value="Rekrutacja na administratora">Rekrutacja na administratora</option>
+        <option value="Rekrutacja na administratora">Podanie do grupy Stayły Bywalec</option>
+      </select>
       <label class="icon" for="subject_field">
         <i class="fa fa-star fa-fw" aria-hidden="true"></i>
       </label>
