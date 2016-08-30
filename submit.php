@@ -16,14 +16,14 @@ function done() {
 if ( isset($_POST) ) {
 
   // Adresat
-  $do         = 'XXX'; // Adres e-Mail na który ma zostać wysłany formularz
+  $do         = 'email@domain.com'; // Adres e-Mail na który ma zostać wysłany formularz
 
   // Dane formularza
   $imie       = $_POST['name_field'];
   $email      = $_POST['address_field'];
   $telefon    = $_POST['phone_field'];
   $firma      = $_POST['company_field'];
-  $temat      = $_POST['subject_field'];
+  $temat      = /* 'Kontakt w sprawie serwera TeamSpeak'; */ $_POST['subject_field'];
   $wiadomosc  = $_POST['message_field'];
 
   $captcha    = $_POST['g-recaptcha-response'];
@@ -35,7 +35,7 @@ if ( isset($_POST) ) {
   $headers = implode("\r\n", $headers);
 
   // ReCaptcha NoCaptcha
-  $secret = "XXX";
+  $secret = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
   if (!$captcha) {
     died('<li>Proszę wypełnić formularz reCAPTCHA.</li>');
     exit;
@@ -51,9 +51,10 @@ if ( isset($_POST) ) {
   if ($response['success'] == false) { // Tutaj sprawdza, czy reCAPtCHa zwraca success
     died('<li>Walidacja reCAPTCHA nie przeszła poprawnie!<br />Twoje działanie zostało zarejestrowane, a dane przesłane do administratora.</li>');
     exit;
-  } else if (  !isset($_POST['name_field'])    ||
-               !isset($_POST['address_field']) ||
-               !isset($_POST['message_field']) ) { // Tutaj jest bloczek, który sprawdza czy dane pola są uzupełnione
+  } else if (  $imie == NULL ||
+               $email == NULL ||
+               $temat == NULL ||
+               $wiadomosc == NULL ) { // Tutaj jest bloczek, który sprawdza czy dane pola są uzupełnione
     died('<li>Nie wszystkie wymagane pola zostały wypełnione.</li>');       
   } else if ( !preg_match($email_exp,$email) ) { // Tutaj sprawdza, czy e-Mail jest poprawnie uzupełniony
     died('<li>Adres e-Mail nie wygląda na autentyczny.</li>');
