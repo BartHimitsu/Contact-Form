@@ -108,7 +108,7 @@ body {display:flex;}
         <option value="Rekrutacja na administratora">Rekrutacja na administratora</option>
         <option value="Rekrutacja na administratora">Podanie do grupy Stayły Bywalec</option>
       </select>
-      <label class="icon" for="subject_field">
+      <label class="icon" for="subject_field" style="cursor: default;">
         <i class="fa fa-star fa-fw" aria-hidden="true"></i>
       </label>
     </div>
