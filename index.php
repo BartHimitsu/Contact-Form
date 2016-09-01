@@ -10,12 +10,13 @@
 
 <style>
 body, html {margin:0;padding:0;}
+body {display:flex;}
 #contact_form {
-  width: 500px;;
+  width: 500px;
   padding: 50px;
-  margin: 25px auto;
+  margin: auto;
   background: white;
-  background: url('https://zotabox.com/media/core/image/gallery/simplepopup/1d.jpg');
+  background: url('./bg.jpg');
   background-size: cover;
   box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.5);
 } #contact_form div.flex {
