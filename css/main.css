@@ -1,0 +1,93 @@
+body, html
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	display:flex;
+}
+
+#formularz_kontaktowy
+{
+	width: 500px;
+	padding: 50px;
+	margin: auto;
+		background: white;
+		background: url('../img/tło.jpg');
+			background-size: 100% 100%;
+			background-attachment: fixed;
+	box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.5);
+	border-radius: 1em;
+}
+
+#formularz_kontaktowy div.flex
+{
+	display: flex;
+	width: 100%;
+}
+
+#formularz_kontaktowy div.pole_formularza
+{
+	position: relative;
+	width: 100%;
+	margin: 5px;
+}
+
+#formularz_kontaktowy div.pole_formularza input,
+#formularz_kontaktowy div.pole_formularza select,
+#formularz_kontaktowy div.pole_formularza textarea
+{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	padding-left: 30px;
+	outline: none;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 4px;
+	background: white;
+	font-family: Arial;
+	color: black;
+}
+
+#formularz_kontaktowy div.pole_formularza textarea
+{
+	resize: vertical;
+}
+
+#formularz_kontaktowy div.pole_formularza input:hover,
+#formularz_kontaktowy div.pole_formularza select:hover,
+#formularz_kontaktowy div.pole_formularza input:focus,
+#formularz_kontaktowy div.pole_formularza textarea:hover,
+#formularz_kontaktowy div.pole_formularza select:hover,
+#formularz_kontaktowy div.pole_formularza textarea:focus
+{
+	border: 1px solid rgba(0,0,0,0.4);
+}
+
+#formularz_kontaktowy div.pole_formularza #przycisk_wysylania
+{
+	width: auto;
+}
+
+#formularz_kontaktowy div.pole_formularza #przycisk_wysylania:hover
+{
+	cursor: pointer;
+}
+
+#formularz_kontaktowy div.pole_formularza .ikonka
+{
+	position: absolute;
+	top: 9px;
+	left: 7px;
+	color: rgba(0,0,0,0.5);
+	cursor: text;
+}
+
+#formularz_kontaktowy div.pole_formularza input:hover + .ikonka, #formularz_kontaktowy div.pole_formularza input:focus + .ikonka,
+#formularz_kontaktowy div.pole_formularza select:hover + .ikonka, #formularz_kontaktowy div.pole_formularza select:focus + .ikonka,
+#formularz_kontaktowy div.pole_formularza textarea:hover + .ikonka, #formularz_kontaktowy div.pole_formularza textarea:focus + .ikonka
+{
+	color: rgba(0,0,0,0.7);
+}
