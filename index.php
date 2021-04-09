@@ -77,12 +77,18 @@
 					<?php
 						for ($i = 0; $i <= count($config_array['WYBOR_JEZYKA']['jezyk']); $i++)
 						{
-							if ( !empty($config_array['WYBOR_JEZYKA']['jezyk'][$i]) )
+							// To importuje dane do zmiennej
+							$jezyk_element = $config_array['WYBOR_JEZYKA']['jezyk'][$i];
+							// Tutaj usuwam z danych klamry array 
+							$jezyk_element = str_replace(array("}","{"), "", $jezyk_element);
+							
+							// Teraz jeśli nie jest puste to buduje element <option> z argumentem innym niż wartość
+							if ( !empty($jezyk_element) )
 								echo "\t\t<option ".
-								( isset($_SESSION['lang']) && $_SESSION['lang'] == strtolower( explode(':', $config_array['WYBOR_JEZYKA']['jezyk'][$i])[0] ) ? 'selected' : '' )
+								( isset($_SESSION['lang']) && $_SESSION['lang'] == strtolower( explode(':', $jezyk_element)[0] ) ? 'selected' : '' )
 								." value=".
-								( strtolower( explode(':', $config_array['WYBOR_JEZYKA']['jezyk'][$i])[0] ) )
-								.">" . ucfirst( explode(':', $config_array['WYBOR_JEZYKA']['jezyk'][$i])[1] ) . "</option>\n";
+								( strtolower( explode(':', $jezyk_element)[0] ) )
+								.">" . ucfirst( explode(':', $jezyk_element)[1] ) . "</option>\n";
 						};
 					?>
 				</select>
