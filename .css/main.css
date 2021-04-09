@@ -1,0 +1,242 @@
+@import url('../../..font-awesome/.css/font-awesome-newest.min.css');
+
+body, html
+{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body
+{
+	display:flex;
+	background: white;
+	color: red;
+}
+
+#kontener_formularzy
+{
+	margin: auto;
+	position: relative;
+}
+
+#formularz_jezyka
+{
+	position: relative;
+	right: 0px;
+	text-align: right;
+}
+
+#przelacznik_jezyka
+{
+	box-sizing: border-box;
+	margin: 5px;
+	border: 1px solid rgba(33, 33, 33, 0.33);
+	border-radius: 4px;
+	background: white;
+	font-family: Calibri, sans-serif;
+	font-size: 1em;
+	color: rgb(33, 33, 33);
+	transition: box-shadow 300ms, border 300ms;
+}
+
+#przelacznik_jezyka:hover
+{
+	border: 1px solid rgba(33, 33, 33, 0.66);
+	box-shadow: 0px 0px 15px -5px rgba(33, 33, 33, 0.33);
+}
+
+#formularz_jezyka label
+{
+	color: rgb(33, 33, 33);
+	font-size: 12px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+}
+
+#formularz_jezyka label img {
+	height: 1em;
+	vertical-align: middle;
+}
+
+#formularz_kontaktowy
+{
+	width: 500px;
+	padding: 50px;
+	margin: auto;
+	background: white;
+		background-image: url(../.img/--pixabay.com-images-id-2362038-.png);
+		background-repeat: repeat;
+		background-attachment: scroll;
+		background-position: center;
+		background-size: contain;
+	box-shadow: 0px 0px 30px -5px rgba(33, 33, 33, 0.33);
+	border-radius: 1em;
+	border: 5px dashed white;
+	transition: box-shadow 300ms;
+}
+
+#formularz_kontaktowy:hover
+{
+/*
+	box-shadow: 0px 0px 30px -5px rgba(33, 33, 33, 0.66);
+*/
+}
+
+#formularz_kontaktowy div.flex
+{
+	display: flex;
+	width: 100%;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza
+{
+	position: relative;
+	width: 100%;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .pole_formularza,
+#formularz_kontaktowy div.kontener_pol_formularza .przycisk_formularza
+{
+	position: relative;
+	box-sizing: border-box;
+	margin: 5px;
+	border: 1px solid rgba(33, 33, 33, 0.33);
+	border-radius: 4px;
+	background: white;
+	font-family: Calibri, sans-serif;
+	font-size: 1em;
+	color: rgb(33, 33, 33);
+	transition: box-shadow 300ms, border 300ms;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .pole_formularza:hover,
+#formularz_kontaktowy div.kontener_pol_formularza .przycisk_formularza:hover
+{
+	border: 1px solid rgba(33, 33, 33, 0.66);
+	box-shadow: 0px 0px 15px -5px rgba(33, 33, 33, 0.33);
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .pole_formularza
+{
+	display: block;
+/*
+	padding: 10px;
+	padding-left: 1.75em;
+*/
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .przycisk_formularza
+{
+	display: inline-block;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .przycisk_formularza:hover
+{
+	cursor: pointer;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .przycisk_formularza input.element_formularza:hover
+{
+	cursor: inherit;
+}
+
+
+
+#formularz_kontaktowy .ikonka
+{
+	position: absolute;
+	top: 0px;
+	left: 7px;
+	color: rgba(33, 33, 33, 0.66);
+	cursor: text;
+	transform: translateY(80%);
+	transition: color 300ms;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza .element_formularza
+{
+	width: 100%;
+/* Właściwie to ten height nie działa, a jak działa to psuje */
+/*
+	height: 100%; 
+*/
+	padding: 1em;
+	padding-left: 2.33em;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza #tresc_wiadomosci_pole_formularza
+{
+	resize: vertical;
+	min-height: 3em;
+	max-height: 50vh;
+	text-indent: 1.11em;
+	padding: 10px;
+	padding-left: 10px;
+	font-size: 1.1em;
+	line-height: 1.1em;
+	font-family: 'Times New Roman', serif;
+}
+
+#formularz_kontaktowy div.sekcja_akceptacja label
+{
+	text-shadow: 0px -0px 3px rgba(33, 33, 33, 0.66);
+	color: white;
+	user-select: none;
+}
+
+
+
+#formularz_kontaktowy div.kontener_pol_formularza span.limit
+{
+/*
+	display: none;
+*/
+	position: absolute;
+	top: 0.33em;
+	transform: translateY(33%);
+	right: 0.66em;
+	color: rgba(0,0,0,0.5);
+	user-select: none;
+	background: rgb(245, 245, 245);
+	border-radius: 3px;
+	border: 1px solid rgba(230, 230, 230);
+	padding: 3px;
+	opacity: 1.0;
+	transition: opacity 300ms;
+}
+
+#formularz_kontaktowy div.kontener_pol_formularza span.limit:hover
+{
+	background: white;
+	opacity: 0.3;
+}
+
+/*
+#formularz_kontaktowy div.pole_formularza:hover span.limit
+{
+	display: initial;
+}
+*/
+
+
+#formularz_kontaktowy div.pole_formularza input:hover + .ikonka, #formularz_kontaktowy div.pole_formularza input:focus + .ikonka,
+#formularz_kontaktowy div.pole_formularza select:hover + .ikonka, #formularz_kontaktowy div.pole_formularza select:focus + .ikonka,
+#formularz_kontaktowy div.pole_formularza textarea:hover + .ikonka, #formularz_kontaktowy div.pole_formularza textarea:focus + .ikonka
+{
+	color: rgba(33, 33, 33, 1.0);
+}
+
+
+#kontener_praw_autorskich
+{
+	position: relative;
+	text-align: center;
+	user-select: none;
+	color: rgb(33, 33, 33);
+	font-size: 12px;
+	font-family: sans-serif;
+}
