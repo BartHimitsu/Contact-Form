@@ -81,14 +81,15 @@
 							$jezyk_element = $config_array['WYBOR_JEZYKA']['jezyk'][$i];
 							// Tutaj usuwam z danych klamry array 
 							$jezyk_element = str_replace(array("}","{"), "", $jezyk_element);
+							$rozdzielacz_tekstu = ':';
 							
 							// Teraz jeśli nie jest puste to buduje element <option> z argumentem innym niż wartość
 							if ( !empty($jezyk_element) )
-								echo "\t\t<option ".
-								( isset($_SESSION['lang']) && $_SESSION['lang'] == strtolower( explode(':', $jezyk_element)[0] ) ? 'selected' : '' )
+								echo "\t\t<option " .
+								( isset($_SESSION['lang']) && $_SESSION['lang'] == strtolower( explode($rozdzielacz_tekstu, $jezyk_element)[0] ) ? 'selected' : '' )
 								." value=".
-								( strtolower( explode(':', $jezyk_element)[0] ) )
-								.">" . ucfirst( explode(':', $jezyk_element)[1] ) . "</option>\n";
+								( strtolower( explode($rozdzielacz_tekstu, $jezyk_element)[0] ) )
+								.">" . ucfirst( explode($rozdzielacz_tekstu, $jezyk_element)[1] ) . "</option>\n";
 						};
 					?>
 				</select>
@@ -178,8 +179,23 @@
 		<?php
 			for ($i = 0; $i <= count($config_array['TEMATY']['temat']); $i++)
 			{
-				if ( !empty($config_array['TEMATY']['temat'][$i]) )
-					echo "\t\t<option>" . $config_array['TEMATY']['temat'][$i] . "</option>\n";
+				$temat_element = $config_array['TEMATY']['temat'][$i];
+				$temat_element = str_replace(array("}","{"), "", $temat_element);
+				$rozdzielacz_elementow = ';';
+				$rozdzielacz_jezyka = ':';
+				
+				$temat_element_jezyk = explode($rozdzielacz_jezyka, explode($rozdzielacz_elementow, $temat_element)[0])[0];
+
+				//$temat_element_element = explode($rozdzielacz_jezyka, explode($rozdzielacz_elementow, $temat_element)[0])[1];
+
+				if ( !empty($temat_element) )
+					echo "\t\t<option>" .
+					( isset($_SESSION['lang']) && $_SESSION['lang'] ==  strtolower( $temat_element_jezyk ) ? 
+					// To wyciąga tekst dla elementu #0 - czyli języka pierwszego
+					explode($rozdzielacz_jezyka, explode($rozdzielacz_elementow, $temat_element)[0])[1] : 
+					// To wyciąga tekst już dla kolejnego elementu #1 - czyli drugi język - jeśli chcemy więcej języków, to tutaj musiałby być pętla
+					explode($rozdzielacz_jezyka, explode($rozdzielacz_elementow, $temat_element)[1])[1] ) .
+					"</option>\n";
 			};
 
 		?>
