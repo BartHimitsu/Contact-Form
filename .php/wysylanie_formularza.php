@@ -348,7 +348,7 @@
 		$wiadomosc1_tresc_html = implode("\r\n", $wiadomosc1_tresc_html);
 
 	// Treść WIADOMOŚĆ #1 (HTML)
-{		$wiadomosc1_tresc_html = $wiadomosc1_tresc_html . chunk_split(base64_encode('<html>
+{		$wiadomosc1_tresc_html = $wiadomosc1_tresc_html . chunk_split('<html>
 	<head></head>
 	<body>
 	
@@ -398,7 +398,7 @@
 	<p>Ta wiadomość została wysłana przez formularz kontaktowy na stronie <a href="'.$adres_strony_formularza.'" target="_blank">'.$adres_strony_formularza.'</a>.</p>
 	
 	</body>
-	</html>'));
+	</html>');
 };
 
 	// Załączniki WIADOMOŚĆ #1 (HTML)
@@ -410,7 +410,7 @@
 				"--$wiadomosc1_boundary",
 				"Content-Type: ".$zalaczone_pliki['type'][$klucz]."; name=".$zalaczone_pliki['name'][$klucz].";",
 				"Content-Disposition: attachment; filename=".$zalaczone_pliki['name'][$klucz].";",
-				"Content-Transfer-Encoding: base64;",
+				"Content-Transfer-Encoding: text/htm;",
 				"X-Attachment-Id: ".rand(1000, 99999).";",
 				"\r\n",
 				$zakodowany_zalacznik."\r\n"
@@ -448,7 +448,7 @@
 				blad(_bledy_nie_mozna_wyslac_maila);
 
 	// Podgląd dla WIADOMOŚĆ #1
-		echo $config_array['USTAWIENIA']['nie_wysylaj_lecz_zdekoduj_maile'] == true ? base64_decode($wiadomosc1, false) : null;
+		echo $config_array['USTAWIENIA']['nie_wysylaj_lecz_zdekoduj_maile'] == true ? $wiadomosc1 : null;
 
 };
 
@@ -474,13 +474,13 @@
 		$wiadomosc2_tresc_html = array(
 			"--$wiadomosc2_boundary",
 			"Content-Type: text/html; charset=UTF-8;",
-			"Content-Transfer-Encoding: base64;",
+			"Content-Transfer-Encoding: text/htm;",
 			"\r\n"
 			);
 		$wiadomosc2_tresc_html = implode("\r\n", $wiadomosc2_tresc_html);
 
 	// Treść WIADOMOŚĆ #2 (HTML)
-{		$wiadomosc2_tresc_html = $wiadomosc2_tresc_html . chunk_split(base64_encode('<html>
+{		$wiadomosc2_tresc_html = $wiadomosc2_tresc_html . chunk_split('<html>
 	<head></head>
 	<body>
 	
@@ -537,7 +537,7 @@
 	'._wiadomosc2_stopka_prosimy_nieodpowiadac.'</p>
 	
 	</body>
-	</html>'));
+	</html>');
 };
 
 	// Główny nagłówek dla WIADOMOŚĆ #2 (HTML)
@@ -567,7 +567,7 @@
 				blad(_bledy_nie_mozna_wyslac_maila);
 
 	// Podgląd dla WIADOMOŚĆ #2
-		echo $config_array['USTAWIENIA']['nie_wysylaj_lecz_zdekoduj_maile'] == true ? base64_decode($wiadomosc2, false) : null;
+		echo $config_array['USTAWIENIA']['nie_wysylaj_lecz_zdekoduj_maile'] == true ? $wiadomosc2 : null;
 
 	};
 
