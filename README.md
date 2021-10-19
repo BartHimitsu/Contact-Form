@@ -11,8 +11,10 @@ Link: https://barthimitsu.com/contact
 - - It can remember lang in cookie.
 - - Once lang is selected it generate direct link to selected lang so it can be shared that way.
 - - It can be translated to other langs.
-- Attachments - can be more than once.
-- ReCaptcha v3
+- Attachments - can be more than once and attachment pannel is translated!
+- ReCaptcha v3.
+- WYSWIG text editor (like Word etc.).
+- Shows how many digits left to reach limit for each form field.
 - Fully configurable config file - User can decide there about:
 - - min & max allowed length for message, addressee, recipient, email.
 - - Enable/disable return & confirming email.
@@ -37,3 +39,9 @@ Link: https://barthimitsu.com/contact
 - - Topics:
 - - - User can enable/disable topic to be typed or selected from predefined list.
 - - - Fully configurable list - support multilang - unfortunately currently only for two langs.
+- Errors - shows erros and can take user back to fix and sent form again:
+- - Erros about lengths for each field.
+- - Error about captcha.
+- - Error about incorrect mail.
+- - Error about incorrect file type.
+- - Error about too big file.
