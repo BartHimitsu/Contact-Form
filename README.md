@@ -12,6 +12,7 @@ Link: https://barthimitsu.com/contact
 - - Once lang is selected it generate direct link to selected lang so it can be shared that way.
 - - It can be translated to other langs.
 - Attachments - can be more than once.
+- ReCaptcha v3
 - Fully configurable config file - User can decide there about:
 - - min & max allowed length for message, addressee, recipient, email.
 - - Enable/disable return & confirming email.
