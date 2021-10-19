@@ -1,5 +1,9 @@
 # Contact-Form
-This is my contact form made in PHP.
+This is my contact form made:
+- Backend in PHP.
+- Frontend in HTML.
+- Styled in CSS.
+- Helped with a little JavScript & jQuery.
 
 # Live Exmaple:
 ![obraz](https://user-images.githubusercontent.com/2501014/137866945-49a9bc88-d52b-4b29-96ea-f75c8c4cec97.png)
