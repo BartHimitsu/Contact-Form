@@ -3,7 +3,7 @@
 // Ogólne słówka
 define("_kliknij_tutaj", "Click here");
 define("_tytul_calej_aplikacji", "Contact Form");
-define("_prawa_autorskie", "All rights reserved - <a href='https://www.bartinfinity.com' target='_blank' style='color: inherit;'>www.BartInfinity.com</a>");
+define("_prawa_autorskie", "All rights reserved - <a href='https://www.BartHimitsu.com' target='_blank' style='color: inherit;'>www.BartHimitsu.com</a>");
 
 // Front end of the contact form
 define("_nadawca_pole_formularza", "Your name or nickname");
